@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://kit.fontawesome.com/adaa6ddddc.js" crossorigin="anonymous"></script>
+    <title>MAYBELLINE</title>
+    <link rel="stylesheet" href="./Css/styles.css">
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <img src="./img/lg.png" alt="Maybelline logo">
+        </div>
+        <ul>
+            <li><a href="#dashboard" onclick="showWidgets()">Dashboard</a></li>
+            <li><a href="#home" onclick="showHome()">Home</a></li>
+            <li><a href="#products" onclick="showProducts()">Products</a></li>
+            <li><a href="#stories" onclick="showStories()">Stories</a></li>
+            <li><a href="#aboutus" onclick="showAboutUs()">About Us</a></li>
+        </ul>
+    </nav>
+
+    <div class="home-page" id="homePage">
+        <!-- <h1>Welcome to Maybelline</h1> -->
+        <div class="auth-options">
+
+        </div>
+    </div>
+
+    <div class="container" id="loginContainer">
+        <h1>Maybelline Login</h1>
+        <div class="box">
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+            <input type="text" name="email" id="email" placeholder="Enter Your Email">
+        </div>
+        <div class="box">
+            <i class="fa fa-key" aria-hidden="true"></i>
+            <input type="password" name="password" id="password" placeholder="Enter Your Password">
+        </div>
+        <button class="btn" onclick="login()">Sign In</button>
+        <p>Don't have an account? <a href="#" onclick="showSignup()">Sign Up</a></p>
+    </div>
+
+    <div class="container" id="signupContainer" style="display:none;">
+        <h1>Sign Up</h1>
+        <div class="box">
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+            <input type="email" name="email" id="signupEmail" placeholder="Enter Your Email" required>
+        </div>
+        <div class="box">
+            <i class="fa fa-key" aria-hidden="true"></i>
+            <input type="password" name="password" id="signupPassword" placeholder="Enter Your Password" required>
+        </div>
+        <div class="box">
+            <i class="fa fa-key" aria-hidden="true"></i>
+            <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Your Password"
+                required>
+            <span id="passwordError" class="error-message"></span>
+        </div>
+        <button class="btn" onclick="signup()">Sign Up</button>
+        <p>Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+    </div>
+
+    <div class="container" id="signupContainer" style="display:none;">
+        <h1>Sign Up</h1>
+        <div class="box">
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+            <input type="text" name="email" id="signupEmail" placeholder="Enter Your Email">
+        </div>
+        <div class="box">
+            <i class="fa fa-key" aria-hidden="true"></i>
+            <input type="password" name="password" id="signupPassword" placeholder="Enter Your Password">
+        </div>
+        <div class="box">
+            <i class="fa fa-key" aria-hidden="true"></i>
+            <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Your Password">
+        </div>
+        <button class="btn" onclick="signup()">Sign Up</button>
+        <p>Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+    </div>
+
+
+    <div id="aboutUsContainer" style="display:none;">
+        <h1>About Us</h1>
+        <p>Maybelline is a well-known American cosmetics brand that was founded in 1915 by Thomas Lyle Williams.
+            The brand's first product was inspired by a homemade mascara mixture used by Williams' sister, Mabel.
+            Over theyears, Maybelline has grown significantly and was acquired by L'Oréal in 1996, becoming part of one
+            of the
+            world's largest beauty companies.</p>
+        <p>Maybelline's mission is to provide innovative, affordable, and easy-to-use beauty products that inspire
+            confidence and self-expression. Their extensive product range includes foundations, mascaras, lipsticks,
+            nail polishes, and skincare items, making beauty accessible to everyone. Known for its iconic slogan, "Maybe
+            she's born with it. Maybe it's Maybelline," the brand has a strong global presence and is available in over
+            120 countries.</p>
+        <p>The brand values inclusivity, innovation, and sustainability. Maybelline strives to cater to diverse skin
+            tones and types, continuously develops new products with the latest technology, and is committed to reducing
+            its environmental impact. Maybelline is also active in empowering individuals and communities through
+            various campaigns and supports charitable causes related to women's rights and health.</p>
+        <p>For more information, you can visit their official website.</p>
+    </div>
+
+
+    <div id="productsContainer" style="display:none;">
+        <h1>Our Products</h1>
+        <div class="product-list">
+            <div class="product-item">
+                <img src="./img/ftm.jpg" alt="Fit Me Foundation">
+                <h2>Fit Me Foundation</h2>
+                <p>A lightweight foundation that provides natural coverage for a flawless finish.</p>
+            </div>
+            <div class="product-item">
+                <img src="./img/lsh.jpg" alt="Lash Sensational Mascara">
+                <h2>Lash Sensational Mascara</h2>
+                <p>Get full, fanned-out lashes with our best-selling mascara.</p>
+            </div>
+            <div class="product-item">
+                <img src="./img/high.jpg" alt="Master Chrome Highlighter">
+                <h2>Master Chrome Highlighter</h2>
+                <p>Achieve a radiant glow with our metallic highlighter.</p>
+            </div>
+            <div class="product-item">
+                <img src="./img/lps.jpg" alt="Superstay Matte Ink Lipstick">
+                <h2>Superstay Matte Ink Lipstick</h2>
+                <p>Long-lasting, highly pigmented liquid lipstick with a matte finish.</p>
+            </div>
+
+            <div class="product-item">
+                <img src="./img/plt.jpg" alt="City Mini Eyeshadow Palette">
+                <h2>City Mini Eyeshadow Palette</h2>
+                <p>A compact eyeshadow palette with a range of vibrant colors.</p>
+            </div>
+            <div class="product-item">
+                <img src="./img/ub.jpg" alt="Dream Urban Cover Foundation">
+                <h2>Dream Urban Cover Foundation</h2>
+                <p>Full coverage foundation with SPF 50, perfect for urban life.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="widgetContainer" style="display:none;">
+        <h1>Our widgets</h1>
+        <div class="widget-list">
+            <div class="widget-item">
+                <img src="./img/eye.jpg" alt="EYE MAKEUP">
+                <h2>EYE MAKEUP</h2>
+                <p>Whether you are looking for a beginner-friendly eyeliner tutorial to enhance your eye shape or want to turn heads with a dramatic smokey eyeshadow look, express yourself in Maybelline with these eye makeup tutorials.
+                     From how to get the perfect eyebrows as an eye makeup newbie to easy mascara hacks to get long and voluminous lashes, these simple eye makeup tips will help you transform your look in no time!</p>
+            </div>
+            <div class="widget-item">
+                <img src="./img/face.jpg" alt="FACE MAKEUP">
+                <h2>FACE MAKEUP</h2>
+                <p>Create a flawless makeup base and put your best face forward with these face makeup ideas and tips. 
+                    From choosing the right full coverage foundation to learning how to apply concealer to hide your blemishes, these step-by-step makeup tutorials, guides, and hacks are perfect for everyone and even absolute beginners.</p>
+            </div>
+            <div class="widget-item">
+                <img src="./img/lip.jpg" alt="LIP MAKEUP">
+                <h2>LIP MAKEUP</h2>
+                <p>How do I apply lipstick? How to find perfect nude lipstick for my complexion? What lipstick color will go well with my green dress? Do I need a special lip care routine? 
+                    Find out the answers to these and so many more questions right here!</p>
+            </div>
+            <div class="widget-item">
+                <img src="./img/fea.jpg" alt="FEATURED MAKEUP">
+                <h2>FEATURED MAKEUP</h2>
+                <p>Not sure how to put on makeup the right way? Want to learn more about the latest makeup trends? 
+                    Whether you are a complete newbie or are looking to brush up on your makeup skills, these makeup tutorials will help you get that flawless makeup look every time. 
+                    From matching your foundation to your neck to finding the perfect red lipstick for your skin tone, these step-by-step makeup tips and quick tricks will have you applying your makeup like a pro in no time.
+                </p>
+            </div>
+
+           
+
+    <div id="storiesContainer" style="display:none;">
+        <h1>Stories</h1>
+        <div class="story-list">
+            <div class="story-item">
+                <h2>Story Number 1 </h2>
+                <p> Hey, I am Olivia . I use the Maybelline Products and I like the coverage, skin tone, and quality of
+                    the foundation concealer. </p>
+                <p> It's nice, provides medium coverage and is perfect for my skin tone. The size, seal and quantity are
+                    best. I recommend MAYBELLINE.</p>
+            </div>
+            <div class="story-item">
+                <h2>Story Number 2</h2>
+                <p>Helllo, Here's Ashley. I just loved MAYBELLINE brand. I feel that Maybelline New York compact Powder
+                    is a game-changer! After trying numerous compact powders, I finally found my holy grail </p>
+                <p>The breathable formula feels incredibly lightweight on my skin and is easily spreadable without
+                    looking cakey.</p>
+            </div>
+            <div class="story-item">
+                <h2>Story Number 3</h2>
+                <p>Helllo, Here's Ashley. I just loved MAYBELLINE brand. Maybelline New York Lash Sensational Sky High
+                    Mascara is the greatest they've ever tried. </p>
+                <p>I am enthused about how it quickly raises their lashes to new heights, removing the need for fake
+                    eyelashes. The end product is beautiful lashes that enhance any cosmetic look and are quick to
+                    apply.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Maybelline. All rights reserved.</p>
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+    </footer>
+
+
+
+    <script src="./Script/script.js"></script>
+</body>
+
+</html>
